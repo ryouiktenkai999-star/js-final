@@ -1,3 +1,4 @@
+ HEAD
 # Student Management Dashboard
 
 A beginner-friendly CRUD dashboard built with HTML, CSS, JavaScript, Express.js, and SQLite.
@@ -77,3 +78,6 @@ Do not upload `node_modules` or the local database file. The `.gitignore` file a
 5. Edit the student's details.
 6. Delete the student and show the updated total.
 7. Explain that Express.js handles API requests and SQLite stores the records.
+
+# js-final
+b3c4ce54591aac1c36b1292bd055afdbb480a896
