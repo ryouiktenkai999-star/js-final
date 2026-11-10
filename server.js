@@ -87,7 +87,7 @@ app.post("/api/students", (req, res) => {
     });
     res.status(201).json(db.prepare("SELECT * FROM students WHERE id = ?").get(result.lastInsertRowid));
   } catch (err) {
-    if (err.code === "SQLITE_CONSTRAINT_UNIQUE") {
+    if (err && err.code === "ERR_SQLITE_ERROR" && /UNIQUE constraint failed/i.test(err.message)) {
       return res.status(409).json({ error: "That student ID already exists." });
     }
     res.status(500).json({ error: "Could not save student." });
