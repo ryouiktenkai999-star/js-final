@@ -1,0 +1,5 @@
+node_modules/
+students.db
+students.db-shm
+students.db-wal
+.env
